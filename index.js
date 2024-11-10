@@ -7,6 +7,11 @@ app.use(express.json());
 const b = require('./data');
 const books = b.books;
 
+//Get request for all books
+app.get('/books/all',(req,res)=>{
+    res.json(books);
+})
+
 
 
 
