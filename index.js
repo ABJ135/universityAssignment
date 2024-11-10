@@ -24,6 +24,15 @@ app.get('/books/not_available',(req,res)=>{
     res.json(not_available);
 })
 
+//get search by author name
+app.get('/books/search',(req,res)=>{
+    const search = req.query.author;
+
+    const find = books.find(book => book.author.toLocaleLowerCase().includes(search.toLocaleLowerCase()));
+
+    res.json(find);
+})
+
 //Listen request for server
 app.listen(port,()=>{
     console.log(`server listening on port ${port}`)
