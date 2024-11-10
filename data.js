@@ -14,7 +14,7 @@ const books = [
         id : 3,
         title: 'Book 3',
         author : 'Alice',
-        is_available: true
+        is_available: false
     }
 
 ]

@@ -18,6 +18,11 @@ app.get('/books/available',(req,res)=>{
     res.json(available);
 })
 
+//get request for not available
+app.get('/books/not_available',(req,res)=>{
+    const not_available = books.filter(book => book.is_available === false);
+    res.json(not_available);
+})
 
 //Listen request for server
 app.listen(port,()=>{
