@@ -12,7 +12,11 @@ app.get('/books/all',(req,res)=>{
     res.json(books);
 })
 
-
+//get request for Available books
+app.get('/books/available',(req,res)=>{
+    const available = books.filter(book => book.is_available);
+    res.json(available);
+})
 
 
 //Listen request for server
