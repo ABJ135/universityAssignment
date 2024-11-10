@@ -7,3 +7,10 @@ app.use(express.json());
 const b = require('./data');
 const books = b.books;
 
+
+
+
+//Listen request for server
+app.listen(port,()=>{
+    console.log(`server listening on port ${port}`)
+})
